@@ -4,6 +4,7 @@ const bodyparser = require('body-parser');
 
 let app = express();
 
+app.use(bodyparser.urlencoded({extended: false }));
 app.use(bodyparser.json());
 
 consing().include('routes').into(app);
